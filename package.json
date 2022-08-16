@@ -1,0 +1,18 @@
+{
+  "name": "monorepo-starter-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev:pkg2": "pnpm --filter \"@mst/pkg2\" dev",
+    "test:pkg1": "pnpm test --filter \"@mst/pkg1\"",
+    "test:pkg2": "pnpm --filter \"@mst/pkg2\" test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}

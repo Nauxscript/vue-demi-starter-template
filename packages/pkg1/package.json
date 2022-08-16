@@ -1,0 +1,12 @@
+{
+  "name": "@mst/pkg1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \" testing pkg1 \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
