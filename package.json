@@ -5,8 +5,6 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev:pkg2": "pnpm --filter \"@mst/pkg2\" dev",
-    "test:pkg1": "pnpm test --filter \"@mst/pkg1\"",
     "test:com": "pnpm --filter \"@fun/components\" test"
   },
   "keywords": [],
