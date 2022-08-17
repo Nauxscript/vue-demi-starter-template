@@ -7,16 +7,16 @@
 </template>
 <script>
 import { version } from 'vue'
+import { FunButton } from '@fun/components'
 export default {
   name: "Home",
-  components: {},
+  components: {
+    FunButton
+  },
   data() {
     return {
       version
     }
-  },
-  mounted() {
-    console.log(this.FunButton)
   },
 };
 </script>

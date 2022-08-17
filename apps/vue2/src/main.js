@@ -2,9 +2,11 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import store from '@/store'
 import router from '@/router'
-import Fun from '@fun/components'
+// import { FunButton } from '@fun/components'
 
-Vue.use(Fun)
+// console.log(FunButton.install())
+
+// Vue.use(FunButton)
 
 Vue.config.productionTip = false
 
