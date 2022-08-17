@@ -2,7 +2,11 @@
 import { version } from 'vue'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+
+// On-demand import
+// import { FunButton } from '@fun/components'
+
+// import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
