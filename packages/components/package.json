@@ -18,7 +18,8 @@
   "scripts": {
     "test": "vitest",
     "build": "vue-demi-switch 3 && vite build",
-    "build:2": "vue-demi-switch 2 && vite build"
+    "build:2": "vue-demi-switch 2 && vite build",
+    "build:3": "node ./script/build.js --mode vue3"
   },
   "keywords": [],
   "author": "",
