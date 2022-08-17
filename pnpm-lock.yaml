@@ -10,8 +10,9 @@ importers:
 
   apps/vue2:
     specifiers:
-      '@fun/components': workspace:^1.0.0
+      '@fun/components': workspace:*
       '@vitejs/plugin-legacy': ^1.6.4
+      '@vue/composition-api': ^1.7.0
       axios: ^0.25.0
       sass: ^1.49.0
       vite: ^2.7.13
@@ -23,6 +24,7 @@ importers:
       vuex: ^3.6.2
     dependencies:
       '@fun/components': link:../../packages/components
+      '@vue/composition-api': 1.7.0_vue@2.7.8
       axios: 0.25.0
       vite: 2.9.15_sass@1.54.4
       vue: 2.7.8
@@ -55,6 +57,7 @@ importers:
   packages/components:
     specifiers:
       '@vitejs/plugin-vue': ^3.0.3
+      '@vue/composition-api': ^1.7.0
       '@vue/test-utils': ^2.0.2
       jsdom: ^20.0.0
       vite: ^3.0.7
@@ -62,7 +65,8 @@ importers:
       vue: ^3.0.0
       vue-demi: ^0.13.8
     dependencies:
-      vue-demi: 0.13.8_vue@3.2.37
+      '@vue/composition-api': 1.7.0_vue@3.2.37
+      vue-demi: 0.13.8_3nmzzoefrdru4lagmst3ha3a3q
     devDependencies:
       '@vitejs/plugin-vue': 3.0.3_vite@3.0.7+vue@3.2.37
       '@vue/test-utils': 2.0.2_vue@3.2.37
@@ -70,20 +74,6 @@ importers:
       vite: 3.0.7
       vitest: 0.22.0_jsdom@20.0.0
       vue: 3.2.37
-
-  packages/pkg1:
-    specifiers: {}
-
-  packages/pkg2:
-    specifiers:
-      '@mst/pkg1': workspace:^1.0.0
-      typescript: ^4.6.4
-      vite: ^3.0.7
-    dependencies:
-      '@mst/pkg1': link:../pkg1
-    devDependencies:
-      typescript: 4.7.4
-      vite: 3.0.7
 
 packages:
 
@@ -770,6 +760,22 @@ packages:
       - walrus
       - whiskers
     dev: true
+
+  /@vue/composition-api/1.7.0_vue@2.7.8:
+    resolution: {integrity: sha512-hxOgLYR+wjuPX9bkP2pAPlqUs98XxBoa9DSLyp1z6+YR92wC42PZcZKs4d+VRtcv4udOv041Kss+F6ap5nj8YA==}
+    peerDependencies:
+      vue: '>= 2.5 < 2.7'
+    dependencies:
+      vue: 2.7.8
+    dev: false
+
+  /@vue/composition-api/1.7.0_vue@3.2.37:
+    resolution: {integrity: sha512-hxOgLYR+wjuPX9bkP2pAPlqUs98XxBoa9DSLyp1z6+YR92wC42PZcZKs4d+VRtcv4udOv041Kss+F6ap5nj8YA==}
+    peerDependencies:
+      vue: '>= 2.5 < 2.7'
+    dependencies:
+      vue: 3.2.37
+    dev: false
 
   /@vue/reactivity-transform/3.2.37:
     resolution: {integrity: sha512-IWopkKEb+8qpu/1eMKVeXrK0NLw9HicGviJzhJDEyfxTR9e1WtpnnbYkJWurX6WwoFP0sz10xQg8yL8lgskAZg==}
@@ -2485,7 +2491,7 @@ packages:
       - terser
     dev: true
 
-  /vue-demi/0.13.8_vue@3.2.37:
+  /vue-demi/0.13.8_3nmzzoefrdru4lagmst3ha3a3q:
     resolution: {integrity: sha512-Vy1zbZhCOdsmvGR6tJhAvO5vhP7eiS8xkbYQSoVa7o6KlIy3W8Rc53ED4qI4qpeRDjv3mLfXSEpYU6Yq4pgXRg==}
     engines: {node: '>=12'}
     hasBin: true
@@ -2497,6 +2503,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
+      '@vue/composition-api': 1.7.0_vue@3.2.37
       vue: 3.2.37
     dev: false
 
