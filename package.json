@@ -7,7 +7,7 @@
   "scripts": {
     "dev:pkg2": "pnpm --filter \"@mst/pkg2\" dev",
     "test:pkg1": "pnpm test --filter \"@mst/pkg1\"",
-    "test:pkg2": "pnpm --filter \"@mst/pkg2\" test"
+    "test:com": "pnpm --filter \"@fun/components\" test"
   },
   "keywords": [],
   "author": "",
