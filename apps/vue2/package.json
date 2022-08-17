@@ -10,7 +10,7 @@
     "build:prod": "vite build --mode production"
   },
   "dependencies": {
-    "@fun/components": "workspace:^1.0.0",
+    "@fun/components": "workspace:*",
     "axios": "^0.25.0",
     "vite": "^2.7.13",
     "vue": "^2.7.0",

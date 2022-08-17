@@ -9,7 +9,6 @@
   ],
   "main": "./dist/fun.umd.cjs",
   "module": "./dist/fun.js",
-  "types": "index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/fun.js",
