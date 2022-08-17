@@ -17,16 +17,18 @@
   },
   "scripts": {
     "test": "vitest",
-    "build": "vite build"
+    "build": "vue-demi-switch 3 && vite build",
+    "build:2": "vue-demi-switch 2 && vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vue/composition-api": "^1.7.0",
     "vue-demi": "^0.13.8"
   },
   "peerDependencies": {
-    "@vue/composition-api": "^1.0.0-rc.1",
+    "@vue/composition-api": "^1.7.0",
     "vue": "^2.0.0 || >=3.0.0"
   },
   "peerDependenciesMeta": {

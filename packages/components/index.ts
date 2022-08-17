@@ -1,10 +1,13 @@
-import { App } from 'vue'
+import { App } from 'vue-demi'
 import FunButton from './Button'
- 
-// 最终在 views 下使用的组件，其实是这个 index.ts 中注册的组件
-const components = [
+
+// const components = [
+//   FunButton
+// ]
+
+const components = {
   FunButton
-]
+}
 
 export {
   FunButton
@@ -16,8 +19,11 @@ export default {
    * @param app 
    */
   install(app: App) {
-    components.map(item => {
-      app.use(item)
+    Object.keys(components).map((key) => {
+      // console.log(item.name)
+      // app.component(item.name, item)
+      app.component(key, components[key as keyof typeof components])
     })
+    
   }
 }
