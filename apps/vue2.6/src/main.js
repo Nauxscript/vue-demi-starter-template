@@ -3,9 +3,10 @@ import App from '@/App.vue'
 import store from '@/store'
 import router from '@/router'
 
-import { FunButton } from '@fun/components'
+import { FunButton, SvgIcon } from '@nauxscript/components'
 
 Vue.use(FunButton)
+Vue.use(SvgIcon)
 
 Vue.prototype.$version = Vue.version
 
