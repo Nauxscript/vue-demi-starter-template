@@ -1,22 +1,25 @@
 {
-  "name": "nauxscrinpt-test",
+  "name": "@nauxscript/components",
   "version": "0.0.1",
   "description": "only for testing, do not use in production environment",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/fun.umd.cjs",
-  "module": "./dist/fun.js",
+  "main": "./dist/index.d.ts",
+  "module": "./dist/index.es.mjs",
   "exports": {
     ".": {
-      "import": "./dist/fun.js",
-      "require": "./dist/fun.umd.cjs"
+      "import": "./dist/index.es.mjs",
+      "require": "./dist/index.umd.cjs"
     }
   },
   "scripts": {
+    "clean": "rimraf dist",
     "test": "vitest",
-    "build": "vite build",
+    "build": "pnpm clean && pnpm build:es && pnpm build:umd",
+    "build:es": "vite build --config vite.config.ts",
+    "build:umd": "vite build --config vite.config.umd.ts",
     "build:3": "vue-demi-switch 3 && vite build",
     "build:2": "vue-demi-switch 2 && vite build",
     "build:damn": "node ./script/build.js --mode vue3"
@@ -41,7 +44,9 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue/test-utils": "^2.0.2",
     "jsdom": "^20.0.0",
+    "rimraf": "^3.0.2",
     "vite": "^3.0.7",
+    "vite-plugin-dts": "^1.4.1",
     "vite-plugin-vue2": "^1.9.2",
     "vitest": "^0.22.0",
     "vue": "^3.0.0"

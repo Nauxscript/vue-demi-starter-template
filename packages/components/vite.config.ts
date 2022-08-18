@@ -1,29 +1,32 @@
 // vite.config.js
-import Vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts' // https://github.com/qmhc/vite-plugin-dts
 
 export default defineConfig({
   plugins: [
-    Vue(),
+    vue(),
+    dts({
+      insertTypesEntry: false,
+      cleanVueFileName: true,
+      copyDtsFiles: true
+    })
   ],
   build: {
     lib: {
       entry: resolve(__dirname, 'index.ts'),
-      name: 'fun',
+      formats: ['es'],
       // the proper extensions will be added
-      fileName: 'fun',
-      formats: ['es', 'umd']
+      fileName: (target):string => {
+        return `index.${target}.mjs`
+      }
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
       external: ['vue', 'vue-demi'],
       output: {
-        // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
-        globals: {
-          vue: 'Vue',
-          'vue-demi': 'VueDemi'
-        }
+        preserveModules: true
       }
     }
   },
