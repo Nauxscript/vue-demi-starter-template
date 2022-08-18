@@ -5,7 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test:com": "pnpm --filter \"@fun/components\" test"
+    "test:com": "pnpm --filter \"@fun/components\" test",
+    "build": "pnpm --filter \"@nauxscript/components\" build && pnpm move",
+    "move": "node script/move-file.js"
   },
   "keywords": [],
   "author": "",
