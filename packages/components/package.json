@@ -1,8 +1,7 @@
 {
-  "name": "@fun/components",
-  "private": "true",
-  "version": "1.0.0",
-  "description": "",
+  "name": "nauxscrinpt-test",
+  "version": "0.0.1",
+  "description": "only for testing, do not use in production environment",
   "type": "module",
   "files": [
     "dist"
@@ -17,9 +16,10 @@
   },
   "scripts": {
     "test": "vitest",
-    "build": "vue-demi-switch 3 && vite build",
+    "build": "vite build",
+    "build:3": "vue-demi-switch 3 && vite build",
     "build:2": "vue-demi-switch 2 && vite build",
-    "build:3": "node ./script/build.js --mode vue3"
+    "build:damn": "node ./script/build.js --mode vue3"
   },
   "keywords": [],
   "author": "",

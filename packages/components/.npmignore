@@ -1,0 +1,4 @@
+vite.config.js
+vitest.config.ts
+node_modules
+*.map
