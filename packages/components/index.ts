@@ -1,6 +1,7 @@
 import { App } from 'vue-demi'
 import FunButton from './Button'
 import SvgIcon from './svg-icon'
+import {} from './svg-icon/src/svg-icon-helper'
 
 // const components = [
 //   FunButton
