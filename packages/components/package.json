@@ -29,11 +29,13 @@
   "license": "ISC",
   "dependencies": {
     "@vue/composition-api": "^1.7.0",
-    "vue-demi": "^0.13.11"
+    "vue-demi": "^0.13.11",
+    "@nauxscript/bilive": "^0.0.4"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.7.0",
-    "vue": "^2.0.0 || >=3.0.0"
+    "vue": "^2.0.0 || >=3.0.0",
+    "@nauxscript/bilive": "^0.0.4"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {
